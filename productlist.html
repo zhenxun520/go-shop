@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/productlist.css">
+    <title>比价</title>
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="m-logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="m-down">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </header>
+    <div class="m-search">
+        <input type="text" placeholder="请输入你像比价的商品">
+        <button>搜索</button>
+    </div>
+
+    <div class="nav">
+        <!--keng-->
+    </div>
+
+    <div class="m-content">
+        <div class="m-content-info">
+           <!--坑-->
+        </div>
+        <div class="m-page">
+            <button class="p-prve">上一页</button>
+            <select name="select" id="selectpage">
+              <!--keng-->
+
+            </select>
+            <button class="p-next">下一页</button>
+        </div>
+    </div>
+
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+    <script type="text/html" id="tpl-title">
+        {{each result as v i}}
+        <a href="index.html">首页></a>
+        <a href="category.html">全部分类></a>
+        <a href="#">{{v.category}}</a>
+        <a href="javascript:;">筛选</a>
+        {{/each}}
+
+    </script>
+
+
+
+<script type="text/html" id="tpl-content">
+
+    {{each result as v i }}
+    <li class="clearfix">
+        <a class="clearfix" href="product.html?categoryid={{v.categoryId}}&productId={{v.productId}}&productName={{v.productName}}">
+            <div class="m-pic">
+                {{@v.productImg}}
+            </div>
+            <div class="m-pic-content">
+                <div class="m-other">
+                    {{v.productName}}
+                    <span>{{v.productPrice}}</span>
+                </div>
+                <div class="m-other-next clearfix">
+                    <span class="mall">{{v.productQuote}}</span>
+                    <span class="tips">{{v.productCom}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tplpage">
+    <% for(var i = 1;i<=total;i++) {%>
+    <% if(index  == i){ %>
+    <option data-index="{{index}}" data-total="{{total}}"  value="{{i}}" selected>{{i}}/{{total}}</option>
+    <%}else{%>
+    <option data-index="{{index}}" data-total="{{total}}"  value="{{i}}" >{{i}}/{{total}}</option>
+
+    <%} %>
+    <%} %>
+</script>
+
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productlist.js"></script>

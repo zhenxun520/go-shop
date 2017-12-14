@@ -2,11 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+
   <title>慢慢买</title>
 </head>
 <body>
-  
+    <div class="container">
+        <header>
+            <div class="m-logo">
+                <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="m-down">
+                <img src="./images/header_app.png" alt="">
+            </div>
+        </header>
+
+        <!--搜索-->
+        <div class="m-search">
+            <input type="text" placeholder="请输入你像比价的商品">
+            <button>搜索</button>
+        </div>
+
+        <div class="m-nav">
+            <ul class="clearfix">
+               <!--玩坑-->
+            </ul>
+        </div>
+
+        <div class="m-titel-content">
+            <span class="m-fl">超值折扣推荐</span>
+            <img src="./images/more.png" alt="">
+        </div>
+
+        <div class="m-content">
+            <div class="m-content-info">
+                <!--<ul>-->
+                   <!--坑-->
+                <!--</ul>-->
+            </div>
+            <div class="m-more">
+                <a href="moneyctrl.html">更多优惠信息»</a>
+            </div>
+        </div>
+
+
+        <div class="m-titel-content">
+            <span class="m-fl">品牌排行</span>
+            <img src="./images/more.png" alt="">
+        </div>
+
+        <div class="m-footer clearfix">
+                <div class="footer-top">
+                    <div class="m-footer-l">登录</div>
+                    <div class="m-footer-c">注册</div>
+                    <div class="m-footer-r">
+                        <img src="./images/top.jpg" alt="">
+                        返回顶部
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="#" style="color:red">手机app下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    --掌上比价平台
+                    <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+                </div>
+        </div>
+
+    </div>
 </body>
 </html>
+<script type="text/html" id="tpl">
+    {{each result as v i}}
+    <li>
+        <a href="{{v.titlehref}}">
+            {{#v.img}}
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+    {{/each }}
+</script>
+
+<script type="text/html" id="tpl-content">
+
+    {{each result as v i }}
+    <li class="clearfix">
+        <a data-id="{{v.productId}}" class="clearfix" href="#">
+            <div class="m-pic">
+                {{#v.productImgSm}}
+            </div>
+            <div class="m-pic-content">
+                <div class="m-other">
+                    {{v.productName}}
+                    <span>{{v.productPinkage}}</span>
+                </div>
+                <div class="m-other-next clearfix">
+                    <span class="mall">{{v.productFrom}}丨{{v.productTime}}</span>
+                    <span class="tips">{{v.productComCount}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>

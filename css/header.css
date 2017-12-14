@@ -1,0 +1,34 @@
+.zk-top {
+  height: 2.45rem;
+  background-color: #ff841d;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+.zk-top .zk-back {
+  width: 20%;
+  float: left;
+  height: 2.45rem;
+}
+.zk-top .zk-back a {
+  display: block;
+  line-height: 2.45rem;
+  color: #fff;
+  font-size: 2rem;
+}
+.zk-top .zk-center {
+  width: 60%;
+  float: left;
+  line-height: 2.45rem;
+}
+.zk-top .zk-right {
+  width: 20%;
+  float: left;
+}
+.zk-top .zk-right img {
+  width: 1.7rem;
+  height: 1.7rem;
+  float: right;
+  padding-top: 0.4rem;
+  padding-right: 0.4rem;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <title>凑单品</title>
+</head>
+<body>
+<div class="container">
+    <div class="zk-top">
+        <div class="zk-back">
+            <a class=" fa fa-angle-left" href="javascript:history.go(-1)"></a>
+        </div>
+        <div class="zk-center">
+            <h3>凑单品</h3>
+        </div>
+        <div class="zk-right">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </div>
+    <div class="muen">
+        <ul>
+            <li class="store">
+                京东
+            </li>
+            <li class="region">华北</li>
+            <li class="All-prices">全部价格</li>
+            <li class="search"></li>
+        </ul>
+        <div class="sj"></div>
+        <div class="diqu">
+
+        </div>
+        <div class="all-pic">
+            全部价格
+            <span class="fa fa-check"></span>
+        </div>
+    </div>
+
+    <div class="shop-mmm">
+        <!--商品信息-->
+    </div>
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+</body>
+    <!--商铺信息-->
+    <script type="text/html" id="shop-name">
+        {{each result v i }}
+        <div data-shopid="{{v.shopId}}" class="shop-content">
+            {{v.shopName}}
+            <span class="fa fa-check"></span>
+        </div>
+        {{/each }}
+    </script>
+    <!--地区信息-->
+    <script type="text/html" id="shop-region">
+        {{each result v i }}
+            <div data-areaid="{{v.areaId}}" class="region-content">
+                {{v.areaName}}
+                <span class="fa fa-check"></span>
+            </div>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="shop-ppp">
+        {{each result v i }}
+        <div class="shop-content-info">
+            <div class="content-info">
+                <img src="{{v.productImg}}" alt="">
+            </div>
+            <div class="shop-title-name">
+                <p>{{v.productName}}</p>
+                <span>{{v.productPrice}}</span>
+                <span>去凑单</span>
+            </div>
+        </div>
+        {{/each}}
+
+
+    </script>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>

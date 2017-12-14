@@ -1,0 +1,103 @@
+@import "base";
+@import "common";
+
+body{
+    background-color: #fff;
+}
+
+.nav{
+    overflow: hidden;
+    height: 1.9rem;
+    text-align: center;
+  > a{
+    float: left;
+    line-height: 1.9rem;
+  }
+
+  >a:last-child{
+    display: block;
+    float: right;
+    margin-right: 0.35rem;
+    margin-top: 0.225rem;
+    line-height: 1.45rem;
+    width: 3rem;
+    height: 1.45rem;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(to bottom,#d7d7d7,#fafafa);
+    border-radius:0.25rem ;
+  }
+}
+
+
+.m-content {
+  background-color: #fff;
+
+  li {
+    width: 100%;
+    border-bottom: 0.025rem solid #ccc;
+    padding:0.25rem ;
+    > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      .m-pic {
+        float: left;
+        width: 20%;
+        margin-top: 0.75rem;
+        padding-right: 0.3rem;
+        box-sizing: border-box;
+        padding-left: 0.5rem;
+      }
+
+      > .m-pic img {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+
+      }
+
+      .m-pic-content {
+        float: right;
+
+      }
+    }
+
+    .m-pic-content {
+      width: 80%;
+      margin-top: 0.75rem;
+      font-size: 0.7rem;
+      padding-right: 1.25rem;
+      padding-left: 0.2rem;
+
+
+      > .m-other {
+                  font-size: 0.625rem;
+
+
+        > span {
+          color: #ff6c00;
+          display: block;
+          padding: .1rem 0;
+        }
+
+      }
+    }
+    .m-other-next {
+      font-size: 0.575rem;
+      color: #a1a1a1;
+      margin-bottom: 0.5rem;
+      > .tips {
+        float: left;
+        padding: 0 0.3rem 0 0;
+      }
+    }
+  }
+
+}
+
+#selectpage option.now{
+  background-color: red;
+}
+
+

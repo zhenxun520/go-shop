@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/brand.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <title>brand</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="m-logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="m-down">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </header>
+    <div class="m-search">
+        <input type="text" placeholder="请输入你像比价的商品">
+        <button>搜索</button>
+    </div>
+
+    <div class="top-nav">
+        <a href="index.html">首页></a>
+        <a href="category.html">全部分类></a>
+    </div>
+    <div class="hot-p">
+        <p>热门品牌排行</p>
+    </div>
+
+    <div class="pp-ph">
+        <ul>
+           <!--十大品牌电视-->
+        </ul>
+    </div>
+
+    <div class="hot-pl">
+        <p><!--销量排行--></p>
+    </div>
+
+    <div class="shop-box">
+        <ul>
+           <!--销量排行-->
+        </ul>
+    </div>
+
+    <div class="hot-plun">
+        <p><!--销量排行--></p>
+    </div>
+
+    <div class="zxpl">
+         <!--最新评论-->
+        <div class="pic-box">
+
+        </div>
+        <div class="pic-name">
+            <p></p>
+        </div>
+        <div class="new-p">
+              <!--评论-->
+        </div>
+
+
+    </div>
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/html" id="title-pp">
+    {{each result v i}}
+    <li>
+        <a href=""></a>
+        <span class="fa fa-chevron-down"></span>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="pp-ds">
+{{each result v i}}
+    <li>
+        <div class="fl box">{{i+1}}</div>
+        <a data-titleid="{{v.brandTitleId}}" class="fl title-name" href="productlist.html?categoryid={{v.categoryId}}">
+            {{v.brandName}}
+            <p>{{v.brandInfo}}</p>
+        </a>
+        <span class="fa fa-angle-right"></span>
+    </li>
+{{/each}}
+
+</script>
+
+<script type="text/html" id="pj-xl">
+{{each result v i}}
+    <li>
+        <a data-productd="{{v.productId}}" href="product.html?productid={{v.productId}}">
+            <div class="img-lg">
+                {{@v.productImg}}
+            </div>
+            <div class="title-name">
+                <p class="title-name-info">
+                    {{v.productName}}
+                </p>
+                <span class="title-price">{{v.productPrice}}</span>
+                <span class="title-pj">♥♥♥♥♥</span>
+                <div class="title-message">
+                    <i class="bj">{{v.productQuote}}</i>
+                    <i class=pl>{{v.productCom}}</i>
+                </div>
+            </div>
+        </a>
+    </li>
+{{/each}}
+</script>
+
+<script type="text/html" id="zxpl">
+{{each result v i }}
+    <div class="in-fo">
+        <div class="in-fo-name">
+            <div class="m-border"></div>
+           {{v.comName}}:
+            <span>♥♥♥♥♥</span>
+            <span>{{v.comTime}}</span>
+        </div>
+        <div class="in-fo-content">
+            {{v.comContent}}
+            {{v.comFrom}}
+        </div>
+    </div>
+{{/each}}
+
+
+</script>
+
+
+
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brand.js"></script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <title>优惠券</title>
+</head>
+<body>
+<div class="container">
+    <div class="zk-top">
+        <div class="zk-back">
+            <a class=" fa fa-angle-left" href="javascript:history.go(-1)"></a>
+        </div>
+        <div class="zk-center">
+            <h3>优惠券</h3>
+        </div>
+        <div class="zk-right">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </div>
+        <div class="y-tips">
+            <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+        </div>
+        <div class="yhq">
+            <!--yh-content-->
+        </div>
+
+
+
+
+
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+<div class="mui-backdrop">
+    <!--超大图-->
+
+</div>
+</body>
+<script type="text/html" id="title-id">
+{{each result v i }}
+    <div class="yh-content">
+        <div class="lg-img fl">
+            <a href="javascript:;">
+                {{@v.couponProductImg}}
+            </a>
+
+        </div>
+        <div class="content-name fr">
+            <p>{{v.couponProductName}}</p>
+            <span class="yh-price">{{v.couponProductPrice}}</span>
+            <span class="fa fa-angle-right"></span>
+            <div class="message">
+                {{v.couponProductTime}}
+            </div>
+        </div>
+    </div>
+{{/each}}
+
+</script>
+<script type="text/html" id="big-img">
+         {{result[0].couponProductImg}}
+</script>
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"></script>

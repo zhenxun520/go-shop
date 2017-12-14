@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/coupon.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <title>优惠券</title>
+</head>
+<body>
+    <div class="container">
+        <div class="zk-top">
+            <div class="zk-back">
+                <a class=" fa fa-angle-left" href="javascript:history.go(-1)"></a>
+            </div>
+            <div class="zk-center">
+                <h3>优惠券</h3>
+            </div>
+            <div class="zk-right">
+                <img src="./images/header_app.png" alt="">
+            </div>
+        </div>
+        <div class="y-content">
+            <!--图片-->
+        </div>
+
+        <div class="m-footer clearfix">
+            <div class="footer-top">
+                <div class="m-footer-l">登录</div>
+                <div class="m-footer-c">注册</div>
+                <div class="m-footer-r">
+                    <img src="./images/top.jpg" alt="">
+                    返回顶部
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#" style="color:red">手机app下载</a>
+                <a href="#">慢慢买手机版</a>
+                --掌上比价平台
+                <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/html" id="tpl-img">
+    {{each result v i }}
+    <div class="w-33">
+        <a href="{{v.couponLink}}?couponid={{v.couponId}}&couponTitle={{v.couponTitle}}">
+            <img src="{{@v.couponImg}}" alt="">
+            <p>{{v.couponTitle}}</p>
+        </a>
+    </div>
+    {{/each }}
+</script>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/coupon.js"></script>

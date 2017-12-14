@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/moneyproduct.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <title>国内折扣</title>
+</head>
+<body>
+    <div class="container">
+        <header class="clearfix">
+            <a class="fa fa-angle-left" href="javascript:history.go(-1)"></a>
+            <div class="m-logo">
+                <h2>国内折扣</h2>
+            </div>
+            <div class="m-down">
+                <img src="./images/header_app.png" alt="">
+            </div>
+        </header>
+
+        <div class="content">
+               <!--天坑-->
+        </div>
+        <div class="adress">
+            <!--地址址-->
+        </div>
+
+        <div class="shop-m">
+            <a href="#">前往购买</a>
+        </div>
+
+        <div class="manman-m">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+
+        <div class="m-pl-sj">
+
+
+        </div>
+
+
+
+
+        <div class="m-footer clearfix">
+            <div class="footer-top">
+                <div class="m-footer-l">登录</div>
+                <div class="m-footer-c">注册</div>
+                <div class="m-footer-r">
+                    <img src="./images/top.jpg" alt="">
+                    返回顶部
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#" style="color:red">手机app下载</a>
+                <a href="#">慢慢买手机版</a>
+                --掌上比价平台
+                <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!--地址址-->
+    <script type="text/html" id="tpl-c">
+            {{each result v i }}
+                 {{@v.productCity}}
+
+            {{/each}}
+    </script>
+
+    <script type="text/html" id="tpl-tk">
+        {{each result v i}}
+        <h3>{{v.productName}}</h3>
+        <div class="title-info">
+            <span>{{v.productFrom}}</span>
+            <span>{{v.productTime}}</span>
+            <span>{{v.productTips}}</span>
+        </div>
+        <div class="info-text">
+            <p class="first-text">{{v.productInfo}}</p>
+                {{@v.productImgSm}}
+            <p class="last-text">{{v.productInfo1}}</p>
+                {{@v.productImgLg}}
+        </div>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="tpl-pl">
+
+            {{each result v i }}
+
+                {{@v.productComment}}
+
+            {{/each}}
+
+    </script>
+</body>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/moneyproduct.js"></script>

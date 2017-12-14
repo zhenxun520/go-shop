@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/product.css">
+
+    <title>详情</title>
+
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="m-logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="m-down">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </header>
+    <div class="m-search">
+        <input type="text" placeholder="请输入你像比价的商品">
+        <button>搜索</button>
+    </div>
+    <div class="nav">
+        <!--坑-->
+    </div>
+    <!--图片标题-->
+    <div class="bj-content">
+        <div class="bj-box">
+            <!--标题的渲染-->
+        </div>
+        <div class="b-box">
+            收藏
+        </div>
+    </div>
+    <!--评价-->
+    <div class="comment">
+        <span>比价购买</span>
+        <span>产品参数</span>
+        <span>评论(2322)</span>
+    </div>
+
+    <!--静态的数据-->
+    <div class="bj-jd clearfix">
+        <div class="fl">
+            <img src="./images/slogo.png" alt="">
+            <span>京东商城</span>
+        </div>
+        <div class="fr">
+            <span>&yen;1999.00</span>
+            <button>去购买</button>
+        </div>
+    </div>
+
+    <div class="times">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟
+    </div>
+
+    <div class="wypj-title">
+        <div class="title-p">网友评价</div>
+            <div class="sj">
+                <!--网友评价-->
+                </div>
+        <div class="pj-more">
+            <a href="javascript:;">更多评价</a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+
+</div>
+
+    <!--导航栏-->
+    <script type="text/html" id="tpl1">
+
+        <a href="index.html">首页></a>
+        <a href="productlist.html?categoryid={{result[0].categoryId}}">{{result[0].category}}></a>
+        <a class="pname" href="#"></a>
+        <a href="javascript:;">筛选</a>
+        </script>
+    <!--标题的渲染-->
+    <script type="text/html" id="tpl-title">
+        {{each result v i }}
+        <div data-productId="{{v.productId}}" class="bj-title">{{v.productName}}</div>
+        <div class="bj-img">{{@v.productImg}}</div>
+        {{/each}}
+    </script>
+    <!--网友评价-->
+    <script type="text/html" id="tpl-wypj">
+
+        {{each result v i }}
+        <div class="pj-content">
+            <div class="pj-name clearfix">
+                <span class="pj-names fl">{{v.comName}}</span>
+                <span class="pj-times fr">{{v.comTime}}</span>
+            </div>
+            <div class="pj-site">{{v.comFrom}}</div>
+            <div class="pj-text">{{v.comContent}}</div>
+        </div>
+        {{/each}}
+
+    </script>
+</body>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product.js"></script>

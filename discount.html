@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/discount.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <title>国内折扣-详情</title>
+</head>
+<body>
+<div class="container">
+    <div class="zk-top">
+    <div class="zk-back">
+        <a class=" fa fa-angle-left" href="javascript:history.go(-1)"></a>
+    </div>
+    <div class="zk-center">
+        <h3>国内折扣</h3>
+    </div>
+    <div class="zk-right">
+        <img src="./images/header_app.png" alt="">
+    </div>
+</div>
+
+    <div class="xq-content">
+
+        <!--大坑 -->
+
+    </div>
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/html" id="tpl-xq">
+    {{each result v i }}
+    <div class="xq-sj">
+        <div class="xq-message">
+            <h3>{{v.productName}}</h3>
+            <p class="xq-price">{{v.productPrice}}</p>
+            <span>{{v.productFrom}}</span>
+            <span>{{v.productTime}}</span>
+            <span>{{v.productTips}}</span>
+            <p class="p-info">{{v.productInfo}}</p>
+            <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg" alt="">
+        </div>
+        <div class="proimg">
+            {{@v.productImg}}
+        </div>
+        <div class="qwgm">
+            <a href="javascript:history.go(-1)">前往购买</a>
+        </div>
+        <div class="lg-pic">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+        <div class="use-pl">
+            {{@v.productComment}}
+        </div>
+    </div>
+    {{/each}}
+
+</script>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/discount.js"></script>

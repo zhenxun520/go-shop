@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价搜索</title>
+    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="m-logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="m-down">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--搜索-->
+    <div class="m-search">
+        <input type="text" placeholder="请输入你像比价的商品">
+        <button>搜索</button>
+    </div>
+
+    <div class="m-main">
+        <ul>
+            <!--玩坑-->
+        </ul>
+
+    </div>
+
+    <div class="m-footer clearfix">
+        <div class="footer-top">
+            <div class="m-footer-l">登录</div>
+            <div class="m-footer-c">注册</div>
+            <div class="m-footer-r">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#" style="color:red">手机app下载</a>
+            <a href="#">慢慢买手机版</a>
+            --掌上比价平台
+            <p style="font-size: 0.5rem">m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/html" id="category-tpl">
+    {{each result as v i}}
+    <li class="mian-li" data-id="{{v.titleId}}">
+        <a href="javascript:;">{{v.title}}<i class=" fa fa-angle-down"></i></a>
+        <div class="wrap" style="display:none">
+            <ul class="clearfix">
+                <li>xxxxxxxxx</li>
+            </ul>
+        </div>
+    </li>
+    {{/each}}
+
+</script>
+
+<script type="text/html" id="category-more">
+    {{each result as v i }}
+        <li>
+            <a href="productlist.html?categoryid={{v.categoryId}}">{{v.category}}</a>
+        </li>
+    {{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+
+
+
